@@ -1,0 +1,61 @@
+:root {
+    --color1: #FF2E63;
+    --color2: #08D9D6;
+    --color3: #EAEAEA;
+    --bg-color: #161920;
+}
+
+
+html {
+    height: 100vh;
+}
+
+html, body {
+    background-color: var(--bg-color);
+}
+
+body {
+    height: 40%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1, h4, h5 {
+    margin:0;
+}
+
+h1 {
+    flex-basis: 20%;
+    font-size: 10vh;
+    color: var(--color2);
+    text-shadow: 0px 0px 1vh;
+    animation: color_change 50s infinite;
+}
+
+h4 {
+    margin-top: 5vh;
+    font-size: 3vh;
+    color: var(--color3);
+}
+
+h5 {
+    font-size: 3.5vh;
+    color: var(--color1);
+    /* text-shadow: ; */
+    animation: neon 2s infinite ease-in-out;
+}
+
+
+@keyframes neon {
+    25% {text-shadow: 0 0 4vh;}
+    50% {text-shadow: 0 0 10vh;}
+    75% {text-shadow: 0 0 8vh;}
+}
+
+@keyframes color_change {
+    35% {color: #3dd908}
+    75% {color: #c2d919}
+}
